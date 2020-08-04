@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie create</title>
+</head>
+<body>
+<form method="post" action="/create-movie" th:object="${movie}">
+    <input type="hidden" th:field="*{id}">
+    <label>
+        <span>Title:</span>
+        <input type="text" th:field="*{title}">
+    </label>
+    <br>
+    <label>
+        <span>Poster:</span>
+        <input type="text" th:field="*{poster}">
+    </label>
+    <br><br>
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>
